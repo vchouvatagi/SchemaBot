@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/" lang="en">
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="./main.js"></script>
+        <link rel="stylesheet" href="./assets/styles/icons.css" />
+        <script type="text/javascript">
+
+            function widgetLoading() {
+
+                if (widget) {
+
+                    widget.setAutoRefresh(-1);
+
+
+                    // executeWidgetCode();
+
+                } else {
+
+                    console.warn("Defered widget Loading");
+
+                    setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+
+                }
+
+            }
+
+            widgetLoading();
+
+        </script>
+
+
+        <widget:preferences>
+        	<widget:preference type="hidden" name="platformTenant" label="3DEXPERIENCE Platform" defaultValue='' />
+            <widget:preference name="path" type="text" label="File Path" defaultValue="" />
+    	</widget:preferences>
+
+    </head>
+    <body>
+      <div id="app"></div>
+    </body>
+</html>
